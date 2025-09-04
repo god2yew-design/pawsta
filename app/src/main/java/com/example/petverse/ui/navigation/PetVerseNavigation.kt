@@ -106,7 +106,7 @@ fun PetVerseNavigation() {
     ) { padding ->
         NavHost(
             navController = navController,
-            startDestination = NavigationRoutes.AUTH, // TODO: Change to appropriate start destination
+            startDestination = NavigationRoutes.FEED, // Start with feed for now
             modifier = Modifier.padding(padding)
         ) {
             // Auth
