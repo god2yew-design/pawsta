@@ -7,9 +7,9 @@
         android:label="PETVERSE TEST"
         android:theme="@android:style/Theme.Light">
 
-        <!-- Main Activity -->
+        <!-- Test Activity -->
         <activity
-            android:name=".ui.MainActivity"
+            android:name="com.petverse.test.TestActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
