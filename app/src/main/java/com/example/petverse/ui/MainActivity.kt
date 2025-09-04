@@ -1,6 +1,7 @@
 package com.example.petverse.ui
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
@@ -15,8 +16,17 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // First try with traditional Android View to ensure it works
+        val textView = TextView(this).apply {
+            text = "🐾 PETVERSE IS WORKING! 🐾\n\nThis proves our MainActivity is running!"
+            textSize = 24f
+            setPadding(50, 50, 50, 50)
+        }
+        setContentView(textView)
+
+        // Alternative: Uncomment this to test Compose
+        /*
         setContent {
-            // Ultra simple test screen
             Box(
                 modifier = Modifier.fillMaxSize(),
                 contentAlignment = Alignment.Center
@@ -34,17 +44,6 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    // Simple preview
-    Box(
-        modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
-    ) {
-        Text("🐾 PETVERSE PREVIEW 🐾")
+        */
     }
 }
