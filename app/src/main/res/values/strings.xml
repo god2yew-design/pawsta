@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PetVerse</string>
+
+    <!-- Navigation -->
+    <string name="feed">Feed</string>
+    <string name="videos">Videos</string>
+    <string name="services">Services</string>
+    <string name="tours">Tours</string>
+    <string name="profile">Profile</string>
+
+    <!-- Auth -->
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="dont_have_account">Don\'t have an account? Sign up</string>
+    <string name="already_have_account">Already have an account? Login</string>
+
+    <!-- Common -->
+    <string name="create_post">Create Post</string>
+    <string name="no_posts_yet">No posts yet</string>
+    <string name="coming_soon">Coming Soon</string>
+</resources>
