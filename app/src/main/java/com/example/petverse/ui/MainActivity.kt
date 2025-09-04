@@ -1,49 +1,27 @@
 package com.example.petverse.ui
 
+import android.app.Activity
 import android.os.Bundle
+import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.*
-import androidx.compose.material3.*
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 
-class MainActivity : ComponentActivity() {
+class MainActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // First try with traditional Android View to ensure it works
-        val textView = TextView(this).apply {
-            text = "🐾 PETVERSE IS WORKING! 🐾\n\nThis proves our MainActivity is running!"
-            textSize = 24f
-            setPadding(50, 50, 50, 50)
+        // Create a simple layout programmatically
+        val layout = LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(32, 32, 32, 32)
         }
-        setContentView(textView)
 
-        // Alternative: Uncomment this to test Compose
-        /*
-        setContent {
-            Box(
-                modifier = Modifier.fillMaxSize(),
-                contentAlignment = Alignment.Center
-            ) {
-                Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    Text(
-                        text = "🐾 PETVERSE 🐾",
-                        style = MaterialTheme.typography.displayLarge
-                    )
-                    Spacer(modifier = Modifier.height(16.dp))
-                    Text(
-                        text = "WORKING!",
-                        style = MaterialTheme.typography.headlineMedium
-                    )
-                }
-            }
+        val textView = TextView(this).apply {
+            text = "🐾 PETVERSE IS WORKING! 🐾\n\nThis proves our MainActivity is running!\n\nIf you can see this, the cache issue is fixed!"
+            textSize = 18f
+            setPadding(0, 0, 0, 16)
         }
-        */
+
+        layout.addView(textView)
+        setContentView(layout)
     }
 }
